@@ -1,0 +1,59 @@
+/*-----------------------------------*\
+  #btn.css
+\*-----------------------------------*/
+
+/**
+ * copyright 2022 codewithsadee
+ */
+
+
+
+
+
+.btn {
+  background-color: var(--yellow-accent);
+  font-size: var(--fs-14);
+  font-weight: var(--fw-600);
+  text-transform: capitalize;
+  max-width: max-content;
+  letter-spacing: 1px;
+  padding: 14px 32px;
+  border-radius: 30px;
+  border: 2px solid var(--black);
+  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.3);
+  transition: var(--transition-1);
+  color: var(--black);
+}
+
+.btn:is(:hover, :focus-visible) {
+  background-color: var(--black);
+  color: var(--yellow-accent);
+  box-shadow: 7px 7px 0px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+.btn-primary,
+.btn-secondary {
+  color: var(--black);
+  font-weight: var(--fw-600);
+}
+
+.btn-secondary {
+  background-color: var(--turquoise);
+  border: 2px solid var(--black);
+}
+
+.btn-secondary:is(:hover, :focus-visible) {
+  background-color: var(--mint-green);
+}
+
+.btn-tertiary {
+  color: var(--black);
+  background-color: var(--pink-accent);
+  border: 2px solid var(--black);
+}
+
+.btn-tertiary:is(:hover, :focus-visible) {
+  background-color: var(--yellow-accent);
+  color: var(--black);
+}

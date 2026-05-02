@@ -1,0 +1,148 @@
+/*-----------------------------------*\
+  #certs.css
+\*-----------------------------------*/
+
+/**
+ * Certifications page - Cartoonish style
+ */
+
+@import url("../require.css");
+@import url("../main.css");
+
+/*-----------------------------------*\
+  #SERVICE (CERTIFICATIONS)
+\*-----------------------------------*/
+
+.service {
+  background: var(--beige-bg);
+  position: relative;
+  overflow: hidden;
+  padding-block: calc(var(--section-padding) + 80px) var(--section-padding);
+}
+
+/* Decorative blobs */
+.service::before,
+.service::after {
+  display: none;
+}
+
+.service .section-title {
+  color: var(--purple-text);
+  font-weight: 900;
+  margin-bottom: 60px;
+  position: relative;
+  z-index: 1;
+}
+
+.service-list {
+  display: grid;
+  gap: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+.service .card-container {
+  transition: transform 0.3s ease;
+}
+
+.service .card {
+  border-radius: 35px;
+  padding: 40px;
+  border: 2px solid var(--black);
+  box-shadow: 7px 7px 0px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: visible;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.service .card:hover {
+  transform: translateY(-8px);
+  box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.4);
+}
+
+.service .card-title {
+  color: var(--black);
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+  transition: color 0.3s ease;
+}
+
+.service .card:hover .card-title {
+  color: var(--purple-text);
+}
+
+.service .card .body-sm {
+  color: var(--dark-text);
+  line-height: 1.8;
+  font-size: 1.5rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.service .card:hover .body-sm {
+  color: var(--black);
+}
+
+/*-----------------------------------*\
+  #MEDIA QUERIES
+\*-----------------------------------*/
+
+/**
+ * responsive for large than 575px screen
+ */
+
+@media (min-width: 575px) {
+  .service-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+/**
+ * responsive for large than 768px screen
+ */
+
+@media (min-width: 768px) {
+  .service-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .service .card {
+    padding: 35px;
+  }
+}
+
+/**
+ * responsive for large than 992px screen
+ */
+
+@media (min-width: 992px) {
+  .service-list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+  }
+
+  .service .card {
+    padding: 40px;
+  }
+}
+
+/**
+ * responsive for small screens
+ */
+
+@media (max-width: 574px) {
+  .service .card {
+    padding: 30px 25px;
+  }
+
+  .service .card-title {
+    font-size: 2rem;
+  }
+}
+
+/* Made with Bob */

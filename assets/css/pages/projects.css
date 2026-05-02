@@ -1,0 +1,190 @@
+/*-----------------------------------*\
+  #projects.css
+\*-----------------------------------*/
+
+/**
+ * Projects page - Cartoonish style
+ */
+
+@import url("../require.css");
+@import url("../main.css");
+
+/*-----------------------------------*\
+  #PORTFOLIO (PROJECTS)
+\*-----------------------------------*/
+
+.portfolio {
+  background: var(--beige-bg);
+  min-height: 80vh;
+  position: relative;
+  overflow: hidden;
+  padding-block: calc(var(--section-padding) + 80px) var(--section-padding);
+}
+
+/* Decorative blobs */
+.portfolio::before,
+.portfolio::after {
+  display: none;
+}
+
+.portfolio .section-title {
+  color: var(--purple-text);
+  font-weight: 900;
+  margin-bottom: 60px;
+  position: relative;
+  z-index: 1;
+}
+
+.portfolio-list {
+  display: grid;
+  gap: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.portfolio-card {
+  background: var(--cream);
+  border-radius: 35px;
+  padding: 45px;
+  border: 2px solid var(--black);
+  box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: visible;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 12px 12px 0px rgba(0, 0, 0, 0.4);
+}
+
+.card-content {
+  position: relative;
+  z-index: 1;
+}
+
+.portfolio-card .title-md {
+  font-size: 2.8rem;
+  font-weight: 900;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  transition: transform 0.3s ease;
+  color: var(--black);
+}
+
+.portfolio-card:hover .title-md {
+  transform: translateX(5px);
+}
+
+.portfolio-card .title-md img {
+  transition: transform 0.3s ease;
+  filter: drop-shadow(3px 3px 0px rgba(0, 0, 0, 0.2));
+}
+
+.portfolio-card:hover .title-md img {
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* Gradient text colors */
+.gradient-text {
+  background: linear-gradient(90deg, #11998e 0%, #38ef7d 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text2 {
+  background: linear-gradient(90deg, #ee0979 0%, #ff6a00 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text3 {
+  background: linear-gradient(90deg, var(--purple-text) 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.portfolio-card .card-text {
+  color: var(--dark-text);
+  line-height: 1.8;
+  font-size: 1.6rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.portfolio-card:hover .card-text {
+  color: var(--black);
+}
+
+/*-----------------------------------*\
+  #MEDIA QUERIES
+\*-----------------------------------*/
+
+/**
+ * responsive for large than 575px screen
+ */
+
+@media (min-width: 575px) {
+  .portfolio-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+/**
+ * responsive for large than 768px screen
+ */
+
+@media (min-width: 768px) {
+  .portfolio-card {
+    padding: 40px;
+  }
+
+  .portfolio-card .title-md {
+    font-size: 2.6rem;
+  }
+}
+
+/**
+ * responsive for large than 992px screen
+ */
+
+@media (min-width: 992px) {
+  .portfolio-list {
+    gap: 50px;
+  }
+
+  .portfolio-card {
+    padding: 50px;
+  }
+
+  .portfolio-card .title-md {
+    font-size: 3rem;
+  }
+}
+
+/**
+ * responsive for small screens
+ */
+
+@media (max-width: 574px) {
+  .portfolio-card {
+    padding: 30px 25px;
+  }
+
+  .portfolio-card .title-md {
+    font-size: 2.2rem;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .portfolio-card .title-md img {
+    height: 50px !important;
+  }
+}
+
+/* Made with Bob */
