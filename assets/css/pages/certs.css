@@ -78,7 +78,7 @@
 
 .service .card .body-sm {
   color: var(--dark-text);
-  line-height: 1.8;
+  line-height: 1.5;
   font-size: 1.5rem;
   font-weight: 500;
   transition: color 0.3s ease;

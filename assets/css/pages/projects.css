@@ -71,7 +71,6 @@
   align-items: center;
   gap: 1.5rem;
   transition: transform 0.3s ease;
-  color: var(--black);
 }
 
 .portfolio-card:hover .title-md {
@@ -80,30 +79,50 @@
 
 .portfolio-card .title-md img {
   transition: transform 0.3s ease;
-  filter: drop-shadow(3px 3px 0px rgba(0, 0, 0, 0.2));
 }
 
 .portfolio-card:hover .title-md img {
   transform: scale(1.1) rotate(5deg);
 }
 
-/* Gradient text colors */
-.gradient-text {
-  background: linear-gradient(90deg, #11998e 0%, #38ef7d 100%);
+/* Gradient text colors — one per card */
+.gradient-text1 {
+  background: linear-gradient(90deg, #e02c2c 0%, #ff6b35 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .gradient-text2 {
-  background: linear-gradient(90deg, #ee0979 0%, #ff6a00 100%);
+  background: linear-gradient(90deg, #1a6dff 0%, #00c8ff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .gradient-text3 {
-  background: linear-gradient(90deg, var(--purple-text) 0%, #764ba2 100%);
+  background: linear-gradient(90deg, #7b2ff7 0%, #f107a3 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text4 {
+  background: linear-gradient(90deg, #11998e 0%, #38ef7d 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text5 {
+  background: linear-gradient(90deg, #f7971e 0%, #ffd200 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text6 {
+  background: linear-gradient(90deg, #ee0979 0%, #ff6a00 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
